@@ -1,0 +1,359 @@
+using System.Diagnostics;
+
+namespace Projekt;
+
+public partial class Form1 : Form
+{
+    public Form1()
+    {
+        InitializeComponent();
+        numericUpDown1.Maximum = 2000000;
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+        wybor = 1;
+    }
+
+    private void button2_Click(object sender, EventArgs e)
+    {
+        wybor = 2;
+    }
+    private void button3_Click(object sender, EventArgs e)
+    {
+        wybor = 3;
+    }
+
+    private void button4_Click(object sender, EventArgs e)
+    {
+        wybor = 4;
+    }
+
+    private void button5_Click(object sender, EventArgs e)
+    {
+        wybor = 5;
+    }
+
+    private void button6_Click(object sender, EventArgs e)
+    {
+        if (sortingInProgress)
+        {
+            MessageBox.Show("Sortowanie jest już w trakcie. Poczekaj na zakończenie.");
+            return;
+        }
+
+        sortingInProgress = true; // Oznacz, że sortowanie jest w trakcie
+        stopwatch.Restart();
+        if (wybor == 1)
+        {
+            if (currentArray != null)
+            {
+                currentArray = SortowanieB(currentArray);
+                textBox2.Text = string.Join(" ", currentArray);
+            }
+            else
+            {
+                MessageBox.Show("Wprowadź tablicę liczb przed próbą sortowania.");
+            }
+        }
+
+
+        if (wybor == 2)
+        {
+            if (currentArray != null)
+            {
+                currentArray = SelectionSort(currentArray);
+                textBox2.Text = string.Join(" ", currentArray);
+            }
+            else
+            {
+                MessageBox.Show("Wprowadź tablicę liczb przed próbą sortowania.");
+            }
+        }
+
+        if (wybor == 3)
+        {
+            if (currentArray != null)
+            {
+                currentArray = InsertionSort(currentArray);
+                textBox2.Text = string.Join(" ", currentArray);
+            }
+            else
+            {
+                MessageBox.Show("Wprowadź tablicę liczb przed próbą sortowania.");
+            }
+        }
+
+        if (wybor == 4)
+        {
+            if (currentArray != null)
+            {
+                currentArray = MergeSort(currentArray);
+                textBox2.Text = string.Join(" ", currentArray);
+            }
+            else
+            {
+                MessageBox.Show("Wprowadź tablicę liczb przed próbą sortowania.");
+            }
+        }
+
+        if (wybor == 5)
+        {
+            if (currentArray != null)
+            {
+                currentArray = QuickSort(currentArray);
+                textBox2.Text = string.Join(" ", currentArray);
+            }
+            else
+            {
+                MessageBox.Show("Wprowadź tablicę liczb przed próbą sortowania.");
+            }
+        }
+        stopwatch.Stop();
+        TimeSpan elapsed = stopwatch.Elapsed;
+       
+        label3.Text = "Czas sortowania: " + elapsed.ToString("hh\\:mm\\:ss\\.fff");
+
+        sortingInProgress = false;
+    }
+
+    private void Form1_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+    {
+
+    }
+
+    private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+    {
+        
+        int rozmiar = (int)numericUpDown1.Value;
+
+        // Wygeneruj losową tablicę z ograniczoną ilością elementów
+        int[] randomRozmiar = GenerateRandomArray(rozmiar);
+
+        // Przypisz wygenerowaną tablicę do currentArray
+        currentArray = randomRozmiar;
+
+        // Wyświetl wygenerowaną tablicę w textBox1
+        tablica.Text = string.Join(" ", randomRozmiar);
+    }
+    private void checkBox1_CheckedChanged(object sender, EventArgs e)
+    {
+        randomMode = !randomMode; // Zmiana trybu działania
+
+        if (randomMode)
+        {
+            checkBox1.Text = "Losuj"; // Jeśli jesteśmy w trybie losowego generowania
+        }
+        else
+        {
+            checkBox1.Text = "Wprowadź ręcznie"; // Jeśli jesteśmy w trybie ręcznego wpisywania
+        }
+    }
+
+    private void textBox1_TextChanged(object sender, EventArgs e)
+    {
+
+        string napis = tablica.Text;
+        var conv = Convert(napis);
+        currentArray = conv;
+    }
+    private void textBox2_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+    private void label3_Click(object sender, EventArgs e)
+    {
+
+    }
+    private bool sortingInProgress = false;
+    private Stopwatch stopwatch = new Stopwatch();
+    private bool randomMode = true;
+    private int[] currentArray;// Tablica, którą będziemy sortować
+    int wybor = 0;
+
+    private int[] GenerateRandomArray(int size)
+    {
+        Random random = new Random();
+        int[] randomArray = new int[size];
+
+        for (int i = 0; i < size; i++)
+        {
+            randomArray[i] = random.Next(1, 100); // Zakres losowanych liczb (możesz dostosować)
+        }
+
+        return randomArray;
+    }
+    int[] Convert(string napis)
+    {
+        var liczbyS = napis.Trim().Split(' ');
+        var wynik = new int[liczbyS.Length];
+        for (int i = 0; i < liczbyS.Length; i++)
+        {
+            wynik[i] = int.Parse(liczbyS[i]);
+        }
+        return wynik;
+    }
+
+    int[] SortowanieB(int[] tab)
+    {
+        bool cbz;
+        int temp;
+        do
+        {
+            cbz = false;
+            for (int i = 0; i < tab.Length - 1; i++)
+            {
+                if (tab[i] > tab[i + 1])
+                {
+                    temp = tab[i];
+                    tab[i] = tab[i + 1];
+                    tab[i + 1] = temp;
+                    cbz = true;
+                }
+            }
+        } while (cbz);
+        return tab;
+    }
+    int[] SelectionSort(int[] tab)
+    {
+
+        for (int i = 0; i < tab.Length - 1; i++)
+        {
+            int minIndex = i;
+            for (int j = i; j < tab.Length; j++)
+            {
+                if (tab[j] < tab[minIndex])
+                {
+                    minIndex = j;
+                }
+            }
+            int temp = tab[i];
+            tab[i] = tab[minIndex];
+            tab[minIndex] = temp;
+        }
+        return tab;
+    }
+    int[] InsertionSort(int[] tab)
+    {
+        for (int i = 1; i < tab.Length; i++)
+        {
+            int currentElement = tab[i];
+            int j = i - 1;
+
+            while (j >= 0 && tab[j] > currentElement)
+            {
+                tab[j + 1] = tab[j];
+                j--;
+            }
+
+            tab[j + 1] = currentElement;
+        }
+
+        return tab;
+    }
+    int[] MergeSort(int[] tab)
+    {
+        if (tab.Length <= 1)
+        {
+            return tab;
+        }
+
+        int middle = tab.Length / 2;
+        int[] left = new int[middle];
+        int[] right = new int[tab.Length - middle];
+
+        for (int i = 0; i < middle; i++)
+        {
+            left[i] = tab[i];
+        }
+
+        for (int i = middle; i < tab.Length; i++)
+        {
+            right[i - middle] = tab[i];
+        }
+
+        left = MergeSort(left);
+        right = MergeSort(right);
+
+        return Merge(left, right);
+    }
+
+    int[] Merge(int[] left, int[] right)
+    {
+        int leftLength = left.Length;
+        int rightLength = right.Length;
+        int[] result = new int[leftLength + rightLength];
+
+        int i = 0, j = 0, k = 0;
+
+        while (i < leftLength && j < rightLength)
+        {
+            if (left[i] <= right[j])
+            {
+                result[k++] = left[i++];
+            }
+            else
+            {
+                result[k++] = right[j++];
+            }
+        }
+
+        while (i < leftLength)
+        {
+            result[k++] = left[i++];
+        }
+
+        while (j < rightLength)
+        {
+            result[k++] = right[j++];
+        }
+
+        return result;
+    }
+    int[] QuickSort(int[] tab)
+    {
+        if (tab.Length <= 1)
+        {
+            return tab;
+        }
+
+        int pivotIndex = tab.Length / 2;
+        int pivot = tab[pivotIndex];
+
+        List<int> left = new List<int>();
+        List<int> right = new List<int>();
+
+        for (int i = 0; i < tab.Length; i++)
+        {
+            if (i == pivotIndex)
+            {
+                continue;
+            }
+            if (tab[i] <= pivot)
+            {
+                left.Add(tab[i]);
+            }
+            else
+            {
+                right.Add(tab[i]);
+            }
+        }
+
+        List<int> sortedList = new List<int>();
+        sortedList.AddRange(QuickSort(left.ToArray()));
+        sortedList.Add(pivot);
+        sortedList.AddRange(QuickSort(right.ToArray()));
+
+        return sortedList.ToArray();
+    }
+
+    private void label4_Click(object sender, EventArgs e)
+    {
+
+    }
+}
