@@ -55,7 +55,7 @@ namespace grafy
 
         public Wezel3 Znajdz(int liczba)
         {
-
+            //mozna oprzec o ZnajdzRodzica
         }
 
         public Wezel3 ZnajdzMin(Wezel3 w)
