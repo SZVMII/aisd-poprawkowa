@@ -1,0 +1,33 @@
+D:\aisd\grafy\bin\Debug\grafy.exe.config
+D:\aisd\grafy\bin\Debug\grafy.exe
+D:\aisd\grafy\bin\Debug\grafy.pdb
+D:\aisd\grafy\obj\Debug\grafy.csproj.AssemblyReference.cache
+D:\aisd\grafy\obj\Debug\grafy.csproj.SuggestedBindingRedirects.cache
+D:\aisd\grafy\obj\Debug\grafy.Form1.resources
+D:\aisd\grafy\obj\Debug\grafy.Properties.Resources.resources
+D:\aisd\grafy\obj\Debug\grafy.csproj.GenerateResource.cache
+D:\aisd\grafy\obj\Debug\grafy.csproj.CoreCompileInputs.cache
+D:\aisd\grafy\obj\Debug\grafy.exe
+D:\aisd\grafy\obj\Debug\grafy.pdb
+D:\grafy\bin\Debug\grafy.exe.config
+D:\grafy\bin\Debug\grafy.exe
+D:\grafy\bin\Debug\grafy.pdb
+D:\grafy\obj\Debug\grafy.csproj.AssemblyReference.cache
+D:\grafy\obj\Debug\grafy.csproj.SuggestedBindingRedirects.cache
+D:\grafy\obj\Debug\grafy.Form1.resources
+D:\grafy\obj\Debug\grafy.Properties.Resources.resources
+D:\grafy\obj\Debug\grafy.csproj.GenerateResource.cache
+D:\grafy\obj\Debug\grafy.csproj.CoreCompileInputs.cache
+D:\grafy\obj\Debug\grafy.exe
+D:\grafy\obj\Debug\grafy.pdb
+C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\bin\Debug\grafy.exe.config
+C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\bin\Debug\grafy.exe
+C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\bin\Debug\grafy.pdb
+C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.csproj.AssemblyReference.cache
+C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.csproj.SuggestedBindingRedirects.cache
+C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.Form1.resources
+C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.Properties.Resources.resources
+C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.csproj.GenerateResource.cache
+C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.csproj.CoreCompileInputs.cache
+C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.exe
+C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.pdb
