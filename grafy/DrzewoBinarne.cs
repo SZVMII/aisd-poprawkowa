@@ -55,21 +55,68 @@ namespace grafy
 
         public Wezel3 Znajdz(int liczba)
         {
-            //mozna oprzec o ZnajdzRodzica
+            Wezel3 rodzic = ZnajdzRodzica(liczba);
+
+            if (rodzic == null)
+            {
+                return korzen;
+            }
+
+            if (liczba < rodzic.wartosc)
+            {
+                return rodzic.leweDziecko;
+            }
+
+            else if(liczba > rodzic.wartosc)
+            {
+                return rodzic.praweDziecko;
+            }
+            else
+            {
+                return rodzic;
+            }
+
+
         }
 
         public Wezel3 ZnajdzMin(Wezel3 w)
         {
-
+            while (w.leweDziecko != null)
+            {
+                w = w.leweDziecko;
+            }
+            return w;
         }
 
         public Wezel3 ZnajdzMax(Wezel3 w)
         {
-
+            while (w.praweDziecko != null)
+            {
+                w = w.praweDziecko;
+            }
+            return w;
         }
 
         public Wezel3 Nastepnik(Wezel3 w)
         {
+            if (w == null)
+            {
+                return null;
+            }
+
+            if (w.praweDziecko != null)
+            {
+                return ZnajdzMin(w.praweDziecko);
+            }
+
+            Wezel3 rodzic = w.rodzic;
+            while (rodzic != null && w == rodzic.praweDziecko)
+            {
+                w = rodzic;
+                rodzic = rodzic.rodzic;
+            }
+
+            return rodzic;
             /*
              * a)jeżeli jest praweDziecko -> znajdz minimum na w.praweDziecko
              * b)jeżeli nie ma praweDziecko -> idz do gory az wyjdziesz w rodzicow jako leweDziecko. Nastepnik to rodzic
@@ -79,7 +126,16 @@ namespace grafy
 
         public Wezel3 Poprzednik(Wezel w)
         {
+            if (w == null)
+            {
+                return null;
+            }
 
+            if (w.leweDziecko != null)
+            {
+                return ZnajdzMax(w.leweDziecko);
+            }
+            return null;
         }
     }
 }
