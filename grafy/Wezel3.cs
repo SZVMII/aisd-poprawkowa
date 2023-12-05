@@ -21,15 +21,16 @@ namespace grafy
 
         internal void Add(int liczba)
         {
-            Wezel3 Dziecko = new Wezel3(liczba);
-            Dziecko.rodzic = this;
+            Wezel3 dziecko = new Wezel3(liczba);
+            dziecko.rodzic = this;
 
-            if(liczba < this.wartosc)
+            if (liczba < this.wartosc)
             {
-                this.leweDziecko = Dziecko;
-            } else
+                leweDziecko = dziecko;
+            }
+            else
             {
-                this.praweDziecko = Dziecko;
+                praweDziecko = dziecko;
             }
         }
     }

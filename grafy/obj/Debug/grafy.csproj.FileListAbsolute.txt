@@ -20,14 +20,24 @@ D:\grafy\obj\Debug\grafy.csproj.GenerateResource.cache
 D:\grafy\obj\Debug\grafy.csproj.CoreCompileInputs.cache
 D:\grafy\obj\Debug\grafy.exe
 D:\grafy\obj\Debug\grafy.pdb
-C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\bin\Debug\grafy.exe.config
-C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\bin\Debug\grafy.exe
-C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\bin\Debug\grafy.pdb
-C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.csproj.AssemblyReference.cache
-C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.csproj.SuggestedBindingRedirects.cache
-C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.Form1.resources
-C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.Properties.Resources.resources
-C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.csproj.GenerateResource.cache
-C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.csproj.CoreCompileInputs.cache
-C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.exe
-C:\Users\local\Downloads\AISD-pop-main (1)\AISD-pop-main\grafy\obj\Debug\grafy.pdb
+D:\UWM\AISD-pop\grafy\obj\Debug\grafy.csproj.AssemblyReference.cache
+D:\UWM\AISD-pop\grafy\obj\Debug\grafy.Form1.resources
+D:\UWM\AISD-pop\grafy\obj\Debug\grafy.Properties.Resources.resources
+D:\UWM\AISD-pop\grafy\obj\Debug\grafy.csproj.GenerateResource.cache
+D:\UWM\AISD-pop\grafy\obj\Debug\grafy.csproj.CoreCompileInputs.cache
+D:\UWM\AISD-pop\grafy\obj\Debug\grafy.exe
+D:\UWM\AISD-pop\grafy\obj\Debug\grafy.pdb
+D:\UWM\AISD-pop\grafy\bin\Debug\grafy.exe.config
+D:\UWM\AISD-pop\grafy\bin\Debug\grafy.exe
+D:\UWM\AISD-pop\grafy\bin\Debug\grafy.pdb
+C:\Users\local\Downloads\AISD-pop-main (2)\AISD-pop-main\grafy\bin\Debug\grafy.exe.config
+C:\Users\local\Downloads\AISD-pop-main (2)\AISD-pop-main\grafy\bin\Debug\grafy.exe
+C:\Users\local\Downloads\AISD-pop-main (2)\AISD-pop-main\grafy\bin\Debug\grafy.pdb
+C:\Users\local\Downloads\AISD-pop-main (2)\AISD-pop-main\grafy\obj\Debug\grafy.csproj.AssemblyReference.cache
+C:\Users\local\Downloads\AISD-pop-main (2)\AISD-pop-main\grafy\obj\Debug\grafy.csproj.SuggestedBindingRedirects.cache
+C:\Users\local\Downloads\AISD-pop-main (2)\AISD-pop-main\grafy\obj\Debug\grafy.Form1.resources
+C:\Users\local\Downloads\AISD-pop-main (2)\AISD-pop-main\grafy\obj\Debug\grafy.Properties.Resources.resources
+C:\Users\local\Downloads\AISD-pop-main (2)\AISD-pop-main\grafy\obj\Debug\grafy.csproj.GenerateResource.cache
+C:\Users\local\Downloads\AISD-pop-main (2)\AISD-pop-main\grafy\obj\Debug\grafy.csproj.CoreCompileInputs.cache
+C:\Users\local\Downloads\AISD-pop-main (2)\AISD-pop-main\grafy\obj\Debug\grafy.exe
+C:\Users\local\Downloads\AISD-pop-main (2)\AISD-pop-main\grafy\obj\Debug\grafy.pdb

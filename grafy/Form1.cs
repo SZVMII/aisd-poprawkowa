@@ -91,9 +91,58 @@ namespace grafy
             }
         }
 
+       
         private void binaryTree_btn_Click(object sender, EventArgs e)
         {
-            DrzewoBinarne d1 = new DrzewoBinarne(5);
+            DrzewoBinarne d2 = new DrzewoBinarne(13);
+
+            d2.Add(5);
+            d2.Add(4);
+            d2.Add(7);
+            d2.Add(6);
+            d2.Add(9);
+            d2.Add(7);
+            d2.Add(1);
+            d2.Add(4);
+            d2.Add(4);
+            d2.Add(3);
+            d2.Add(5);
+            d2.Add(2);
+            d2.Add(2);
+          
+            Wezel3 znajdz = d2.Znajdz(4);
+            Wezel3 min = d2.ZnajdzMin(d2.korzen);
+            Wezel3 max = d2.ZnajdzMax(d2.korzen);
+            Wezel3 nast = d2.Nastepnik(znajdz);
+            Wezel3 poprz = d2.Poprzednik(znajdz);
+
+            
+        }
+      
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DrzewoBinarne d1 = new DrzewoBinarne(13);
+
+            d1.Add(5);
+            d1.Add(4);
+            d1.Add(7);
+            d1.Add(6);
+            d1.Add(9);
+            d1.Add(7);
+            d1.Add(1);
+            d1.Add(4);
+            d1.Add(4);
+            d1.Add(3);
+            d1.Add(5);
+            d1.Add(2);
+            d1.Add(2);
+
+            var w = d1.ZnajdzMin(d1.korzen);
+            while(w!=null)
+            {
+                MessageBox.Show(w.wartosc.ToString());
+                w = d1.Nastepnik(w);
+            }
         }
     }
 }
