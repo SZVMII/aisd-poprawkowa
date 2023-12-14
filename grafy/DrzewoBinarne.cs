@@ -145,11 +145,58 @@ namespace grafy
             return rodzic;
         }
 
-        public Wezel3 usun()
+        private void ReplaceNode(Wezel3 toReplace, Wezel3 replacement)
         {
-            //usuwa wezeł bez dzieci
-            //losuyjemy albo nastepnik lbo poprzednmik
-            //jesli w wezle w i ma dwoje dzieci to szkamy albo poprzednik albo nastepnik(obojetnie) 
+            replacement.rodzic = toReplace.rodzic;
+
+            if (toReplace.rodzic == null)
+            {
+                korzen = replacement;
+            }
+            else if (toReplace.rodzic.leweDziecko == toReplace)
+            {
+                toReplace.rodzic.leweDziecko = replacement;
+            }
+            else
+            {
+                toReplace.rodzic.praweDziecko = replacement;
+            }
+        }
+
+        public Wezel3 Usun(Wezel3 w)
+        {
+            if (w.leweDziecko == null && w.praweDziecko == null)
+            {
+                if (w.rodzic == null)
+                {
+                    korzen = null;
+                }
+                else if (w.rodzic.leweDziecko == w)
+                {
+                    w.rodzic.leweDziecko = null;
+                }
+                else
+                {
+                    w.rodzic.praweDziecko = null;
+                }
+            }
+            else if (w.leweDziecko != null && w.praweDziecko == null)
+            {
+                ReplaceNode(w, w.leweDziecko);
+            }
+            else if (w.leweDziecko == null && w.praweDziecko != null)
+            {
+                ReplaceNode(w, w.praweDziecko);
+            }
+            else
+            {
+                Wezel3 nastepnik = Nastepnik(w);
+                w.wartosc = nastepnik.wartosc;
+                Usun(nastepnik);
+            }
+
+            iloscWezlow--;
+            return w;
         }
     }
 }

@@ -41,3 +41,13 @@ C:\Users\local\Downloads\AISD-pop-main (2)\AISD-pop-main\grafy\obj\Debug\grafy.c
 C:\Users\local\Downloads\AISD-pop-main (2)\AISD-pop-main\grafy\obj\Debug\grafy.csproj.CoreCompileInputs.cache
 C:\Users\local\Downloads\AISD-pop-main (2)\AISD-pop-main\grafy\obj\Debug\grafy.exe
 C:\Users\local\Downloads\AISD-pop-main (2)\AISD-pop-main\grafy\obj\Debug\grafy.pdb
+C:\Users\szymo\Downloads\aisd-poprawkowa-main\aisd-poprawkowa-main\grafy\bin\Debug\grafy.exe.config
+C:\Users\szymo\Downloads\aisd-poprawkowa-main\aisd-poprawkowa-main\grafy\bin\Debug\grafy.exe
+C:\Users\szymo\Downloads\aisd-poprawkowa-main\aisd-poprawkowa-main\grafy\bin\Debug\grafy.pdb
+C:\Users\szymo\Downloads\aisd-poprawkowa-main\aisd-poprawkowa-main\grafy\obj\Debug\grafy.csproj.AssemblyReference.cache
+C:\Users\szymo\Downloads\aisd-poprawkowa-main\aisd-poprawkowa-main\grafy\obj\Debug\grafy.Form1.resources
+C:\Users\szymo\Downloads\aisd-poprawkowa-main\aisd-poprawkowa-main\grafy\obj\Debug\grafy.Properties.Resources.resources
+C:\Users\szymo\Downloads\aisd-poprawkowa-main\aisd-poprawkowa-main\grafy\obj\Debug\grafy.csproj.GenerateResource.cache
+C:\Users\szymo\Downloads\aisd-poprawkowa-main\aisd-poprawkowa-main\grafy\obj\Debug\grafy.csproj.CoreCompileInputs.cache
+C:\Users\szymo\Downloads\aisd-poprawkowa-main\aisd-poprawkowa-main\grafy\obj\Debug\grafy.exe
+C:\Users\szymo\Downloads\aisd-poprawkowa-main\aisd-poprawkowa-main\grafy\obj\Debug\grafy.pdb

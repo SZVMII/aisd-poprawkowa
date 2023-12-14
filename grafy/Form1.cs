@@ -109,14 +109,22 @@ namespace grafy
             d2.Add(5);
             d2.Add(2);
             d2.Add(2);
-          
-            Wezel3 znajdz = d2.Znajdz(4);
-            Wezel3 min = d2.ZnajdzMin(d2.korzen);
-            Wezel3 max = d2.ZnajdzMax(d2.korzen);
-            Wezel3 nast = d2.Nastepnik(znajdz);
-            Wezel3 poprz = d2.Poprzednik(znajdz);
 
-            
+            MessageBox.Show("Korzeń drzewa: " + d2.korzen.wartosc);
+
+            Wezel3 min = d2.ZnajdzMin(d2.korzen);
+            MessageBox.Show("Minimum: " + min.wartosc);
+
+            Wezel3 max = d2.ZnajdzMax(d2.korzen);
+            MessageBox.Show("Maximum: " + max.wartosc);
+
+            int szukanaWartosc = 4;
+            Wezel3 znajdz = d2.Znajdz(szukanaWartosc);
+            MessageBox.Show("Znaleziony węzeł o wartości " + szukanaWartosc + ": " + znajdz.wartosc);
+         
+            Wezel3 nast = d2.Nastepnik(znajdz);
+            MessageBox.Show("Następnik węzła o wartości " + szukanaWartosc + ": " + (nast != null ? nast.wartosc.ToString() : "Brak"));
+
         }
       
         private void button1_Click(object sender, EventArgs e)
@@ -138,9 +146,13 @@ namespace grafy
             d1.Add(2);
 
             var w = d1.ZnajdzMin(d1.korzen);
-            while(w!=null)
+            var u = d1.Znajdz(3);
+
+            int i = 1;
+            while (w!=null)
             {
                 MessageBox.Show(w.wartosc.ToString());
+                i++;
                 w = d1.Nastepnik(w);
             }
         }
