@@ -33,5 +33,16 @@ namespace grafy
                 praweDziecko = dziecko;
             }
         }
+
+        internal int getLiczbaDzieci()
+        {
+            int wynik = 0;
+            if(this.leweDziecko != null)
+                wynik++;
+            if(this.praweDziecko != null)
+                wynik++;
+
+            return wynik;
+        }
     }
 }
